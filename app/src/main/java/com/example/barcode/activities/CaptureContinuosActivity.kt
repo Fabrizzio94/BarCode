@@ -1,4 +1,4 @@
-package com.example.barcode
+package com.example.barcode.activities
 
 import android.Manifest
 import android.content.Intent
@@ -12,15 +12,15 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.barcode.databinding.ActivityMainBinding
+import com.example.barcode.databinding.ActivityCaptureContinuosBinding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.client.android.BeepManager
 import com.journeyapps.barcodescanner.BarcodeCallback
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
 import com.journeyapps.barcodescanner.DefaultDecoderFactory
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class CaptureContinuosActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityCaptureContinuosBinding
     private var barcodeView: DecoratedBarcodeView? = null
     private var beepManager: BeepManager? = null
     private var tvTexto: TextView? = null
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
      override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCaptureContinuosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         requestPermission()
         barLaunch()

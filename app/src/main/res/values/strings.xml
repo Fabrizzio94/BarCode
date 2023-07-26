@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BarCode</string>
+    <string name="menu_options">Escaner App</string>
+    <string name="verificarBoton">Verificar</string>
+    <string name="listarBoton">Listar</string>
+    <string name="levantamientoBoton">Levantamiento</string>
 </resources>
