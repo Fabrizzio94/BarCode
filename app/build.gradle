@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.9.0' apply false
 }
 
 android {
@@ -36,16 +37,33 @@ android {
 }
 
 dependencies {
+    // Core
+    implementation 'androidx.core:core-ktx:1.10.1' // Versión más reciente
+    implementation 'androidx.activity:activity-ktx:1.7.2'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.activity:activity-ktx:1.6.1'
-    // FRAGMETNS
-    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+    // Corrutinas
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+
+    // UI
+    implementation 'androidx.fragment:fragment-ktx:1.6.1' // Versión actualizada
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
     // ZXING
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+
+    // Ktor Client
+    def ktor_version = '2.3.4'
+    implementation "io.ktor:ktor-client-android:$ktor_version"
+    implementation "io.ktor:ktor-client-content-negotiation:$ktor_version"
+    implementation "io.ktor:ktor-serialization-kotlinx-json:$ktor_version"
+    implementation "io.ktor:ktor-client-logging:$ktor_version"
+
+    // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
