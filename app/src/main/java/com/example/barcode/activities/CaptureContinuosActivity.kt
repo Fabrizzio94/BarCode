@@ -26,7 +26,7 @@ class CaptureContinuosActivity : AppCompatActivity() {
     private var tvTexto: TextView? = null
     private var lastText: String? = null
     private companion object{
-        private const val TAG = "PERMISOS_TAG"
+        const val TAG = "PERMISOS_TAG"
     }
 
     private val callback = BarcodeCallback { result ->
@@ -38,7 +38,7 @@ class CaptureContinuosActivity : AppCompatActivity() {
         beepManager!!.playBeepSoundAndVibrate()
 //        val imageView = findViewById<ImageView>(R.id.barcodePreview)
 //        imageView.setImageBitmap(result.getBitmapWithResultPoints(Color.YELLOW))
-        tvTexto = binding.tvLectura
+        //tvTexto = binding.tvLectura
         tvTexto!!.text = this.lastText
     }
      override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +51,7 @@ class CaptureContinuosActivity : AppCompatActivity() {
 
     private fun barLaunch() {
         // permite asignar el view al decorador
-        barcodeView = binding.barcodeScanner
+        barcodeView = binding.barcodeScanner1
         val formats: Collection<BarcodeFormat> =
             listOf(BarcodeFormat.QR_CODE, BarcodeFormat.CODE_39)
         barcodeView?.setStatusText("Pasa el codigo por favor")

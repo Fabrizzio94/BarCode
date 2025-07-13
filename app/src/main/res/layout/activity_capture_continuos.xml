@@ -9,14 +9,14 @@
     tools:context=".activities.CaptureContinuosActivity">
 
     <com.journeyapps.barcodescanner.DecoratedBarcodeView
-        android:id="@+id/barcode_scanner"
+        android:id="@+id/barcode_scanner1"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_alignParentTop="true">
 
     </com.journeyapps.barcodescanner.DecoratedBarcodeView>
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/barcodePreview"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
@@ -27,6 +27,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:hint="RESPUESTA LECTURA"
-        android:textSize="20sp"/>
+        android:textSize="20sp"/>-->
 
 </LinearLayout>
